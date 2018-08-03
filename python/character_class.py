@@ -69,7 +69,7 @@ elif CharacterClass.name(priest.name) == chosen_class:
 elif CharacterClass.name(warrior.name) == chosen_class:
     print("warrior selected")
 
-cpu_class = random.choice(list(class_list))
+cpu_class = random.choice(class_list)
 
 if CharacterClass.name(hunter.name) == cpu_class:
     print("CPU has selected hunter")
