@@ -3,7 +3,7 @@ import random
 
 class CharacterClass:
 
-    name = None
+    name = str
     health = 30
     class_minions = []
 
@@ -56,14 +56,14 @@ warrior = CharacterClass(30, "warrior", [amani_berserker, garrosh, trognepute, d
 
 chosen_class = input("choose your class")
 
-if CharacterClass.name == "hunter":
+if CharacterClass.name(hunter.name) == chosen_class:
     print("hunter selected")
-elif CharacterClass.name == "mage":
+elif CharacterClass.name(mage.name) == chosen_class:
     print("mage selected")
-elif CharacterClass.name == "paladin":
+elif CharacterClass.name(pally.name) == chosen_class:
     print("paladin selected")
-elif CharacterClass.name == "priest":
+elif CharacterClass.name(priest.name) == chosen_class:
     print("priest selected")
-elif CharacterClass.name == "warrior":
+elif CharacterClass.name(warrior.name) == chosen_class:
     print("warrior selected")
 
