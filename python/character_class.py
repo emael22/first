@@ -64,7 +64,7 @@ chosen_class = input("choose your class")
 if CharacterClass.name(hunter.name) == chosen_class:
     print("hunter selected")
     while len(player_minions) < 3:
-        player_minions.append(hunter.class_minions)
+        player_minions.append(random.choice(hunter.class_minions))
     print(player_minions)
 elif CharacterClass.name(mage.name) == chosen_class:
     print("mage selected")
