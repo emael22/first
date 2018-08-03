@@ -53,6 +53,8 @@ mage = CharacterClass(30, "mage", [mana_wyrm, sorcerers_apprentice, kirintor_mag
 priest = CharacterClass(30, "priest", [northshire_cleric, radiant_elemental, auchenai, prophet_velen])
 warrior = CharacterClass(30, "warrior", [amani_berserker, garrosh, trognepute, direhorn_hatchling])
 
+class_list = [pally.name, hunter.name, mage.name, priest.name, warrior.name]
+
 
 chosen_class = input("choose your class")
 
@@ -66,4 +68,17 @@ elif CharacterClass.name(priest.name) == chosen_class:
     print("priest selected")
 elif CharacterClass.name(warrior.name) == chosen_class:
     print("warrior selected")
+
+cpu_class = random.choice(list(class_list))
+
+if CharacterClass.name(hunter.name) == cpu_class:
+    print("CPU has selected hunter")
+elif CharacterClass.name(mage.name) == cpu_class:
+    print("CPU has selected mage")
+elif CharacterClass.name(pally.name) == cpu_class:
+    print("CPU has selected paladin")
+elif CharacterClass.name(priest.name) == cpu_class:
+    print("CPU has selected priest")
+elif CharacterClass.name(warrior.name) == cpu_class:
+    print("CPU has selected warrior")
 
