@@ -12,41 +12,51 @@ warrior_minions = {"Amani Berserker": [2, 3], "Garrosh": [4, 10], "Trognepute": 
 
 
 name = input("choose your class")
-player_minion = "atta"
+player_minion = []
 if name == "hunter":
     print("hunter selected")
-    player_minion = random.choice(list(hunter_minions))
+    while len(player_minion) < 3:
+        player_minion.append(random.choice(list(hunter_minions)))
 elif name == "mage":
     print("mage selected")
-    player_minion = random.choice(list(mage_minions))
+    while len(player_minion) < 3:
+        player_minion.append(random.choice(list(mage_minions)))
 elif name == "paladin":
     print("paladin selected")
-    player_minion = random.choice(list(pally_minions))
+    while len(player_minion) < 3:
+        player_minion.append(random.choice(list(pally_minions)))
 elif name == "priest":
     print("priest selected")
-    player_minion = random.choice(list(priest_minions))
+    while len(player_minion) < 3:
+        player_minion.append(random.choice(list(priest_minions)))
 elif name == "warrior":
     print("warrior selected")
-    player_minion = random.choice(list(warrior_minions))
+    while len(player_minion) < 3:
+        player_minion.append(random.choice(list(warrior_minions)))
 print(player_minion)
 
 cpu_class = random.choice(class_list)
-cpu_minion = "atta cpu"
+cpu_minion = []
 if cpu_class == "hunter":
     print("CPU has selected hunter")
-    cpu_minion = random.choice(list(hunter_minions))
+    while len(cpu_minion) < 3:
+        cpu_minion.append(random.choice(list(hunter_minions)))
 elif cpu_class == "mage":
     print("CPU has selected mage")
-    cpu_minion = random.choice(list(mage_minions))
+    while len(cpu_minion) < 3:
+        cpu_minion.append(random.choice(list(mage_minions)))
 elif cpu_class == "paladin":
     print("CPU has selected paladin")
-    cpu_minion = random.choice(list(pally_minions))
+    while len(cpu_minion) < 3:
+        cpu_minion.append(random.choice(list(pally_minions)))
 elif cpu_class == "priest":
     print("CPU has selected priest")
-    cpu_minion = random.choice(list(priest_minions))
+    while len(cpu_minion) < 3:
+        cpu_minion.append(random.choice(list(priest_minions)))
 elif cpu_class == "warrior":
     print("CPU has selected warrior")
-    cpu_minion = random.choice(list(warrior_minions))
+    while len(cpu_minion) < 3:
+        cpu_minion.append(random.choice(list(warrior_minions)))
 print(cpu_minion)
 
 user_start = input("Wanna start the game ? y/n")

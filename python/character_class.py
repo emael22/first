@@ -55,11 +55,17 @@ warrior = CharacterClass(30, "warrior", [amani_berserker, garrosh, trognepute, d
 
 class_list = [pally.name, hunter.name, mage.name, priest.name, warrior.name]
 
+player_minions = []
+cpu_minions = []
+
 
 chosen_class = input("choose your class")
 
 if CharacterClass.name(hunter.name) == chosen_class:
     print("hunter selected")
+    while len(player_minions) < 3:
+        player_minions.append(hunter.class_minions)
+    print(player_minions)
 elif CharacterClass.name(mage.name) == chosen_class:
     print("mage selected")
 elif CharacterClass.name(pally.name) == chosen_class:
