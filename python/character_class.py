@@ -88,3 +88,5 @@ elif CharacterClass.name(priest.name) == cpu_class:
 elif CharacterClass.name(warrior.name) == cpu_class:
     print("CPU has selected warrior")
 
+
+
