@@ -10,7 +10,7 @@ class CharacterClass:
     def __init__(self, health, name, class_minions):
         self.health = health
         self.name = name
-        self.class_minions = [class_minions]
+        self.class_minions = class_minions
 
 
 class Minions:
@@ -58,35 +58,15 @@ class_list = [pally.name, hunter.name, mage.name, priest.name, warrior.name]
 player_minions = []
 cpu_minions = []
 
+player1_class = input("choose your class")
 
-chosen_class = input("choose your class")
-
-if CharacterClass.name(hunter.name) == chosen_class:
-    print("hunter selected")
-    while len(player_minions) < 3:
-        player_minions.append(random.choice(hunter.class_minions))
-    print(player_minions)
-elif CharacterClass.name(mage.name) == chosen_class:
-    print("mage selected")
-elif CharacterClass.name(pally.name) == chosen_class:
-    print("paladin selected")
-elif CharacterClass.name(priest.name) == chosen_class:
-    print("priest selected")
-elif CharacterClass.name(warrior.name) == chosen_class:
-    print("warrior selected")
+print(player1_class, " selected")
+while len(player_minions) < 3:
+    player_minions.append(random.choice(CharacterClass.class_minions(player1_class)))
+print(player_minions)
 
 cpu_class = random.choice(class_list)
-
-if CharacterClass.name(hunter.name) == cpu_class:
-    print("CPU has selected hunter")
-elif CharacterClass.name(mage.name) == cpu_class:
-    print("CPU has selected mage")
-elif CharacterClass.name(pally.name) == cpu_class:
-    print("CPU has selected paladin")
-elif CharacterClass.name(priest.name) == cpu_class:
-    print("CPU has selected priest")
-elif CharacterClass.name(warrior.name) == cpu_class:
-    print("CPU has selected warrior")
+print(cpu_class, " selected")
 
 
 
