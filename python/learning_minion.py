@@ -39,11 +39,13 @@ for round in range(3):
     round_in_progress = round + 1
     print("Battle", round_in_progress, ":", player_minion[round], "VS", cpu_minion[round])
     attack_value_player1 = classes[name][player_minion[round]][0]
+    health_value_player1 = classes[name][player_minion[round]][1]
     attack_value_cpu1 = classes[cpu_class][cpu_minion[round]][0]
+    health_value_cpu = classes[cpu_class][cpu_minion[round]][1]
 
-    if attack_value_cpu1 > attack_value_player1:
+    if attack_value_cpu1 >= health_value_player1 and attack_value_player1 < health_value_cpu:
         print("CPU", cpu_minion[round], "won round", round_in_progress, "!")
-    elif attack_value_cpu1 < attack_value_player1:
+    elif attack_value_cpu1 < health_value_player1 and attack_value_player1 >= health_value_cpu:
         print("Player 1", player_minion[round], "won round", round_in_progress, "!")
     else:
         print("draw")
