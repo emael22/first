@@ -47,16 +47,16 @@ for round in range(3):
 
     if attack_value_cpu1 >= health_value_player1 and attack_value_player1 < health_value_cpu:
         print("CPU", cpu_minion[round], "won round", round_in_progress, "!")
-        winner_list.append(cpu_class)
+        winner_list.append("cpu")
     elif attack_value_cpu1 < health_value_player1 and attack_value_player1 >= health_value_cpu:
         print("Player 1", player_minion[round], "won round", round_in_progress, "!")
-        winner_list.append(name)
+        winner_list.append("player")
     else:
         print("It's a draw")
 
-if winner_list.count(cpu_class) > winner_list.count(name):
+if winner_list.count("cpu") > winner_list.count("player"):
     print("CPU won ! :(")
-elif winner_list.count(cpu_class) < winner_list.count(name):
+elif winner_list.count("cpu") < winner_list.count("player"):
     print("You Won !")
 else:
     print("Draw Game")
