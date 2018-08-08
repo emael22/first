@@ -52,14 +52,14 @@ for round in range(3):
         print("Player 1", player_minion[round], "won round", round_in_progress, "!")
         winner_list.append(name)
     else:
-        print("Draw")
+        print("It's a draw")
 
 if winner_list.count(cpu_class) > winner_list.count(name):
     print("CPU won ! :(")
 elif winner_list.count(cpu_class) < winner_list.count(name):
     print("You Won !")
 else:
-    print("Draw")
+    print("Draw Game")
 
 
 
