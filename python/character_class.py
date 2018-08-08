@@ -62,7 +62,7 @@ player1_class = input("choose your class")
 
 print(player1_class, " selected")
 while len(player_minions) < 3:
-    player_minions.append(random.choice(CharacterClass.class_minions(player1_class)))
+    player_minions.append(random.choice(CharacterClass.class_minions[player1_class]))
 print(player_minions)
 
 cpu_class = random.choice(class_list)
